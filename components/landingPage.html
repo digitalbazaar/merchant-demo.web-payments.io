@@ -1,10 +1,10 @@
-<h1 align="center">Payment Mediator Demo (HTTP API)</h1>
+<h1 align="center">Merchant Demo (HTTP API)</h1>
 
 <p>
-This site demonstrates a basic implementation of a payment mediator which can
-be used to register payment apps, and route
+This site demonstrates a basic implementation of a merchant site which can
+be used to produce
 <a href="http://w3c.github.io/webpayments/proposals/core-messages/#paymentrequest">payment request</a>s
-and
+and consume
 <a href="http://w3c.github.io/webpayments/proposals/core-messages/#paymentresponse">payment response</a>s.
 This demo is designed for non-interactive payments use cases. For example,
 auto payment of utility bills, business-to-business payments, a car paying
@@ -13,32 +13,32 @@ for a parking spot (Internet of Things), etc. For more information, see the
 </p>
 
 <p>
-The steps below will guide you through the basic Web Payments HTTP API
-ecosystem.
+If you just want to try the Web Payments HTTP API out, the
+<a href="http://http-mediator-demo.web-payments.io/">Payment Mediator Demo</a> 
+is probably the best place to start.
 </p>
 
 <p>
-Before you can process payments, you must first install a payment app.
+If you are a software developer and want to test your software against a 
+Web Payments HTTP API compliant merchant, the following things may be of 
+interest to you:
 </p>
 
-<p>
-To perform a purchase with your payment app, your software will:
-</p>
-
-<ol>
+<ul>
   <li>
-Retrieve a payment request from a merchant.
+Attempt to access a for-pay resource. Try <code>curl {{$root.app.config.data.baseUri}}/movies/dr-strangelove</code>
   </li>
   <li>
-Send the payment request to your payment app.
+Retrieve the payment request for that resource. Try <code>curl {{$root.app.config.data.baseUri}}/movies/dr-strangelove/requests</code>
   </li>
   <li>
-Receive a payment response from your payment app.
+<a href="http://payment-app-demo.web-payments.io/">Process the payment request</a>
+via a payment app, which should result in a payment response.
   </li>
   <li>
-Send the payment response to the merchant.
+Do an HTTP POST of a payment response to <code>{{$root.app.config.data.baseUri}}/movies/dr-strangelove/payments</code>.
   </li>
-</ol>
+</ul>
 
 <p>
 The source for this demonstration can be found on Github under the
