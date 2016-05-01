@@ -26,7 +26,7 @@ interest to you:
 
 <ul>
   <li>
-Attempt to access a for-pay resource. Try <code>curl {{$root.app.config.data.baseUri}}/movies/dr-strangelove</code>
+Attempt to access a for-pay resource. Try <code>curl -v {{$root.app.config.data.baseUri}}/movies/dr-strangelove</code>
   </li>
   <li>
 Retrieve the payment request for that resource. Try <code>curl {{$root.app.config.data.baseUri}}/movies/dr-strangelove/requests</code>
@@ -36,7 +36,7 @@ Retrieve the payment request for that resource. Try <code>curl {{$root.app.confi
 via a payment app, which should result in a payment response.
   </li>
   <li>
-Do an HTTP POST of a payment response to <code>{{$root.app.config.data.baseUri}}/movies/dr-strangelove/payments</code>.
+Do an HTTP POST of the payment response to the payments endpoint: <code>curl -v -X POST -H "Content-Type: application/json" -d @paymentResponse.json {{$root.app.config.data.baseUri}}/movies/dr-strangelove/payments</code>.
   </li>
 </ul>
 
