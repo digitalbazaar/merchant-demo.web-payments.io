@@ -52,7 +52,7 @@ config.express.session.key = 'merchant-demo.web-payments.io.sid';
 config.express.session.prefix = 'merchant-demo.web-payments.io.';
 
 // view variables
-config.views.brand.name = 'merchant-demo.web-payments.io';
+config.views.brand.name = 'Merchant Demo';
 config.views.vars.baseUri = config.server.baseUri;
 config.views.vars.title = config.views.brand.name;
 config.views.vars.siteTitle = config.views.brand.name;
