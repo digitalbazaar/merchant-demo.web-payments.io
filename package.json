@@ -12,7 +12,7 @@
     "bedrock-express": "^2.0.2",
     "bedrock-requirejs": "^2.0.1",
     "bedrock-server": "^2.1.1",
-    "bedrock-views": "^4.0.1",
+    "bedrock-views": "^6.0.0",
     "bower": "^1.7.9",
     "cors": "^2.7.1"
   },
