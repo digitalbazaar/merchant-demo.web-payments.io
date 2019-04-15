@@ -4,7 +4,9 @@
   "scripts": {
     "start": "node merchant-demo.web-payments.dev.js",
     "test": "node merchant-demo.web-payments.dev.js test",
-    "postinstall": "bower install && node merchant-demo.web-payments.dev.js compile-less"
+    "postinstall": "bower install && node merchant-demo.web-payments.dev.js compile-less",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "async": "^1.5.2",
@@ -12,9 +14,10 @@
     "bedrock-express": "^2.0.2",
     "bedrock-requirejs": "^2.0.1",
     "bedrock-server": "^2.1.1",
-    "bedrock-views": "^4.0.1",
+    "bedrock-views": "^6.0.0",
     "bower": "^1.7.9",
-    "cors": "^2.7.1"
+    "cors": "^2.7.1",
+    "snyk": "^1.150.0"
   },
   "devDependencies": {
     "bedrock-protractor": "^3.0.1",
@@ -25,5 +28,6 @@
     "node": ">=4.0.0"
   },
   "directories": {},
-  "main": "./lib/index"
+  "main": "./lib/index",
+  "snyk": true
 }
