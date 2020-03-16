@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "async": "^1.5.2",
-    "bedrock": "^1.2.1",
+    "bedrock": "^3.0.0",
     "bedrock-express": "^2.0.2",
     "bedrock-requirejs": "^2.0.1",
     "bedrock-server": "^2.1.1",
-    "bedrock-views": "^4.0.1",
+    "bedrock-views": "^7.0.0",
     "bower": "^1.7.9",
     "cors": "^2.7.1"
   },
