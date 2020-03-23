@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "async": "^1.5.2",
-    "bedrock": "^1.2.1",
+    "bedrock": "^2.0.0",
     "bedrock-express": "^2.0.2",
     "bedrock-requirejs": "^2.0.1",
     "bedrock-server": "^2.1.1",
